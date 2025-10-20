@@ -4,6 +4,8 @@
 
 #books_page {
     #bookCards {
+        padding: 1rem;
+
         > .book_card:last-child {
             @media (max-width: 1349px) {
                 border: none;
@@ -21,7 +23,7 @@
             gap: 1rem;
             line-height: 1.5;
             border-bottom: solid thin var(--colorHeader);
-            padding: 1rem;
+            padding-bottom: 1rem;
     
             /* Tablet small */
             @media (min-width: 768px) {

@@ -54,9 +54,12 @@
             }
             .contact_card {
                 display: grid;
-                padding: 1rem;
+                padding-bottom: 1rem;
                 line-height: 1.5;
                 
+                @media (min-width: 1350px) {
+                    padding: 1rem;
+                }
 
                 @media (min-width: 768px) {
                     display: flex;
@@ -89,6 +92,9 @@
             
             form {
                 padding: 0 1rem;
+                @media (min-width: 1350px) {
+                    padding-bottom: 1rem;
+                }
                 fieldset {
                     padding: 1rem;
                     border: thin solid var(--colorBorder);
