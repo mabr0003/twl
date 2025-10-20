@@ -16,16 +16,48 @@ body {
 footer {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: 1rem;
+  background-color: var(--colorBgFooter);
+  color: #ffff;
+  padding: 1rem;
   align-items: center;
   text-align: center;
-
-  ul {
-    list-style: none;
-  }
 
   div#kea_publishing {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+  }
+
+  div#social_media {
+    display: flex;
+    gap: 0.2rem;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    a {
+      color: #ffff;
+      text-decoration: none;
+    }
+  }
+
+  ul#credits span {
+    color: var(--colorHeader);
+  }
+
+  @media (width > 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* - *Mobile:* 320px
+- Small tablet: 768px
+- Big tablet: 1024px
+- Desktop; 1350px /*

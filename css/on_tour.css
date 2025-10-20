@@ -1,1 +1,54 @@
+section#on_tour_page {
+  > * {
+    padding: 0 1rem;
+  }
+  img {
+    width: 100%;
+  }
+  > div {
+    > article {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--colorHeader);
 
+      @media (width < 1024px) {
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      h3 {
+        color: var(--colorBgFooter);
+      }
+
+      > p {
+        color: var(--colorSecondary);
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      > div {
+        display: flex;
+        gap: 0.2rem;
+      }
+    }
+
+    @media (width > 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      > article {
+        border: 1px solid var(--colorHeader);
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+/* - *Mobile:* 320px, 480px
+- *Tablet:* 768px
+- *Desktop:* 1024px
+- *TV:* 1200px */
