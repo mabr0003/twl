@@ -89,6 +89,17 @@ footer {
   }
 }
 
+.page_header {
+    background-color: var(--colorBgHeader);
+    color: var(--colorHeader);
+    padding: 1rem;
+}
+
+.up_arrow {
+    display: block;
+    justify-self: end;
+}
+
 /* - *Mobile:* 320px
 - Small tablet: 768px
 - Big tablet: 1024px
