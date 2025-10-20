@@ -1,3 +1,45 @@
 /*
-    Contact page
+    Books page
 */
+
+#books_page {
+    #bookCards {
+        > .book_card:last-child {
+            @media (max-width: 1349px) {
+                border: none;
+            }
+        }
+                
+        /* Desktop */
+        @media (min-width: 1350px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .book_card {
+            display: grid;
+            gap: 1rem;
+            line-height: 1.5;
+            border-bottom: solid thin var(--colorHeader);
+            padding: 1rem;
+    
+            /* Tablet small */
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            /* Desktop */
+            @media (min-width: 1350px) {
+                border: solid thin var(--colorHeader);
+                border-radius: 0.5rem;
+            }
+            picture {
+                justify-self: center;
+            }
+    
+            header {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

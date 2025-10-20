@@ -1,68 +1,143 @@
 /*
     Contact page
 */
-article {
-    img {
-        border-radius: 100%;
-    }
+:root {
+    --colorLink: #0000EE;
+    --colorBorder: #6C6C6C;
 }
-form {
-    fieldset {
-        padding: 0.5rem;
-        border: thin solid black;
-        border-radius: 0.5rem;
 
-        legend {
-            padding: 0 0.25rem;
-            font-size: 0.9rem;
+/* Add to styles CSS */
+.page_header {
+    background-color: var(--colorBgHeader);
+    color: var(--colorHeader);
+    padding: 1rem;
+}
+
+.up_arrow {
+    display: block;
+    justify-self: end;
+}
+
+
+
+
+/* Contact styling */
+#contact_page {
+    .contact_grid {
+        #contactImage {
+            display: none;
         }
-    }
-
-    label {
-        display: inline-block;
-        width: 100%;
-
-        @media only screen and (min-width: 1370px) {
-            width: 7.5rem;
-
-            &[for=txtInformation] {
-                width: 100%;
+        /* Tablet big */
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            #contactImage {
+                display: block;
+                img {
+                    width: 100%;
+                }
             }
         }
-    }
-
-    input {
-        width: auto;
-        margin-bottom: 0.5rem;
-
-        &[type="text"],
-        &[type="email"] {
-            width: 100%;
-
-            @media only screen and (min-width: 1370px) {
-                width: calc(100% - 8.1rem);
+        #contactCards {
+            > .contact_card:first-child {
+                border-bottom: solid thin var(--colorHeader);
+                margin-bottom: 1rem;
             }
+            
+            .contact_border {
+                /* Desktop */
+                @media (min-width: 1350px) {
+                    border: solid thin var(--colorHeader);
+                    border-radius: 0.5rem;
+                }
+            }
+            .contact_card {
+                display: grid;
+                padding: 1rem;
+                line-height: 1.5;
+                
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    gap: 1rem;
+                }
+
+                picture {
+                    justify-self: center;
+                    max-width: 150px;
+                    
+                    img {
+                        border-radius: 100%;
+                        width: 100%;
+                    }
+                }
+
+                header {
+                    margin-bottom: 0.8rem;
+                    @media (min-width: 768px) {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                a {
+                    color: var(--colorLink);
+                    text-decoration: none;
+                }
+            }
+            
+            
+            form {
+                padding: 0 1rem;
+                fieldset {
+                    padding: 1rem;
+                    border: thin solid var(--colorBorder);
+                    border-radius: 0.5rem;
+            
+                    legend {
+                        padding: 0 0.25rem;
+                        font-size: 0.9rem;
+                    }
+                }
+            
+                label {
+                    display: inline-block;
+                    width: 100%;
+            
+                    @media only screen and (min-width: 1370px) {
+                        width: 7.5rem;
+            
+                        &[for=txtInformation] {
+                            width: 100%;
+                        }
+                    }
+                }
+                input, textarea {
+                    border: thin solid var(--colorBorder);
+                    border-radius: 0.125rem;
+                    width: 100%;
+                }
+                input {
+                    margin-bottom: 0.5rem;
+                }
+            
+                textarea {
+                    height: 5rem;
+                }
+            
+                button[type="submit"] {
+                    display: block;
+                    width: auto;
+                    margin: 0.5rem 0 0 1rem;
+                    padding:0.5rem;
+                    border: 1.5px solid var(--colorBorder);
+                    
+                    border-radius: 0.5rem;
+                    font-size: 1rem;
+                }
+            }
+            
         }
-
-        &[type="submit"] {
-            border-radius: 0.5rem;
-        }
     }
-
-    textarea {
-        width: 100%;
-        height: 5rem;
-    }
-
-    button[type="submit"] {
-        display: block;
-        width: auto;
-        margin: 0.5rem 0 0 1rem;
-        padding: 0.25rem 1.5rem;
-        border: thin solid black;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        _color: var(--colorBgHeader);
-        _background-color: var(--colorHeader);
-    }
+    
 }
