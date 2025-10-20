@@ -1,5 +1,6 @@
 :root {
-    --colorBgMain: #FFFAF0;
-    --colorBgHeader: #516283;
-    --colorHeader: #D5C27F;
+  --colorBgMain: #fffaf0;
+  --colorBgHeader: #516283;
+  --colorHeader: #d5c27f;
+  --colorBgFooter: #252858;
 }
