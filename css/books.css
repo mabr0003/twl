@@ -4,41 +4,56 @@
 
 #books_page {
     #bookCards {
+        display: grid;
+        gap: 1rem;
+
         > .book_card:last-child {
             @media (max-width: 1349px) {
                 border: none;
+                padding-bottom: 0;
             }
         }
-                
-        /* Desktop */
+        
         @media (min-width: 1350px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
+
         .book_card {
             display: grid;
             gap: 1rem;
             line-height: 1.5;
             border-bottom: solid thin var(--colorHeader);
-            padding: 1rem;
-    
-            /* Tablet small */
+            padding-bottom: 1rem;
+            
             @media (min-width: 768px) {
-                display: flex;
-                flex-direction: row-reverse;
+                grid-template-columns: auto auto;
             }
             /* Desktop */
             @media (min-width: 1350px) {
                 border: solid thin var(--colorHeader);
                 border-radius: 0.5rem;
+                padding: 1rem;
             }
             picture {
                 justify-self: center;
+                @media (min-width: 768px) {
+                    order: 1;
+                }
             }
-    
-            header {
-                margin-bottom: 1rem;
+
+            h3 {
+                font-size: clamp(1.25rem, 1.2318rem + 0.0808vw, 1.3rem);
+                font-weight: 500;
+            }
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+
+            p {
+                padding-top: 1rem;
             }
         }
     }

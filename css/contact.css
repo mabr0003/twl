@@ -14,11 +14,12 @@
     #contactImage {
       display: none;
     }
-    /* Tablet big */
+    
     @media (min-width: 1024px) {
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 1rem;
+
       #contactImage {
         display: block;
         img {
@@ -33,7 +34,6 @@
       }
 
       .contact_border {
-        /* Desktop */
         @media (min-width: 1350px) {
           border: solid thin var(--colorHeader);
           border-radius: 0.5rem;
@@ -41,12 +41,16 @@
       }
       .contact_card {
         display: grid;
-        padding: 1rem;
+        padding-bottom: 1rem;
         line-height: 1.5;
 
         @media (min-width: 768px) {
           display: flex;
           gap: 1rem;
+        }
+        
+        @media (min-width: 1350px) {
+          padding: 1rem;
         }
 
         picture {
@@ -61,8 +65,14 @@
 
         header {
           margin-bottom: 0.8rem;
+
           @media (min-width: 768px) {
             margin-bottom: 1rem;
+          }
+
+          h3 {
+            font-size: clamp(1.25rem, 1.2318rem + 0.0808vw, 1.3rem);
+            font-weight: 400;
           }
         }
 
@@ -73,7 +83,17 @@
       }
 
       form {
-        padding: 0 1rem;
+        padding-inline: 1rem;
+
+        @media (min-width: 768px) { 
+          padding-inline: 0;
+        }
+        
+        @media (min-width: 1350px) {
+          padding: 0 1rem;
+          padding-bottom: 1rem;
+        }
+        
         fieldset {
           padding: 1rem;
           border: thin solid var(--colorBorder);
@@ -81,7 +101,7 @@
 
           legend {
             padding: 0 0.25rem;
-            font-size: 0.9rem;
+            font-size: clamp(0.9rem, 0.8273rem + 0.3232vw, 1.1rem);
           }
         }
 
@@ -117,9 +137,11 @@
           margin: 0.5rem 0 0 1rem;
           padding: 0.5rem;
           border: 1.5px solid var(--colorBorder);
-
           border-radius: 0.5rem;
-          font-size: 1rem;
+
+          font-family: var(--fontMain);
+          font-size: clamp(1rem, 0.8909rem + 0.4848vw, 1.3rem);
+          font-weight: 300;
         }
       }
     }
